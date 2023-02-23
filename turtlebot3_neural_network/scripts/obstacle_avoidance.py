@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     while not rospy.is_shutdown():
         if driving_forward:
-            if g_range_ahead < 0.2:
+            if g_range_ahead < 0.3:
                 driving_forward = False
                 state_change_time = rospy.Time.now() + rospy.Duration(random.randrange(3, 6))
         else:

@@ -49,4 +49,4 @@ model.compile(loss = 'categorical_crossentropy',
               metrics=['accuracy'])
 model.fit(X_tensor, y, epochs = 30, batch_size = 8, validation_split = 0.2, shuffle = True)
 
-model.save('model.hdf5')
+model.save('model_neural_network.hdf5')

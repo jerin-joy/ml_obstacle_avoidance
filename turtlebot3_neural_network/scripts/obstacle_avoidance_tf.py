@@ -23,7 +23,7 @@ if __name__ == "__main__":
     state_change_time = rospy.Time.now()
     rate = rospy.Rate(10)
 
-    model = tf.keras.models.load_model('model.hdf5')
+    model = tf.keras.models.load_model('model_neural_network.hdf5')
 
     while not rospy.is_shutdown():
         predictions = model.predict(laser_range)
