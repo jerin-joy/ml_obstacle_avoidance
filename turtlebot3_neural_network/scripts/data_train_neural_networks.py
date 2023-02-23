@@ -23,7 +23,7 @@ print("Raw Data")
 print(df.head(5))
 print(f"Number of Data Entries: {len(df)}")
 print(f"Number of v Entries: {len(df[df['v'] == 1])}")
-print(f"Number of v Entries: {len(df[df['w'] == 1])}")
+print(f"Number of w Entries: {len(df[df['w'] == 1])}")
 
 y = pd.concat([df.pop(x) for x in ['v', 'w']], axis = 1)
 X = df
