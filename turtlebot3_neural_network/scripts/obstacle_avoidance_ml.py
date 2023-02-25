@@ -1,6 +1,3 @@
-# obstacle avoidance using random forest classifier.
-
-
 #!/usr/bin/env python
 import rospy
 import random
@@ -21,22 +18,46 @@ if __name__ == "__main__":
     scan_sub = rospy.Subscriber('scan', LaserScan, scan_callback)
     cmd_vel_pub = rospy.Publisher('cmd_vel', Twist, queue_size=1)
 
-    rospy.init_node('obstacle_avoidance_rf')
+    rospy.init_node('obstacle_avoidance')
 
-    state_change_time = rospy.Time.now()
     rate = rospy.Rate(10)
 
-    model_rf = joblib.load('model_rf.joblib')
-
     while not rospy.is_shutdown():
-        predictions = model_rf.predict(laser_range)
-        action = np.argmax(predictions)
+        # display menu options
+        print("Choose a model to load:")
+        print("1. Random Forest")
+        print("2. Neural Network")
+        print("3. Decision Tree")
+        print("4. K-Nearest Neighbors")
+        choice = input()
 
-        twist = Twist()
-        if action == 0:
-            twist.linear.x = 0.3
+        if choice == "1":
+            model_path = "model_random_forest.joblib"
+        elif choice == "2":
+            model_path = "model_neural_network.joblib"
+        elif choice == "3":
+            model_path = "model_decision_tree.joblib"
+        elif choice == "4":
+            model_path = "model_knn.joblib"
         else:
-            twist.angular.z = 0.3
-        cmd_vel_pub.publish(twist)
+            print("Invalid choice, please try again.")
+            continue
 
-        rate.sleep()
+        # load selected model
+        model = joblib.load(model_path)
+
+        # run obstacle avoidance
+        state_change_time = rospy.Time.now()
+
+        while not rospy.is_shutdown():
+            predictions = model.predict(laser_range)
+            action = np.argmax(predictions)
+
+            twist = Twist()
+            if action == 0:
+                twist.linear.x = 0.3
+            else:
+                twist.angular.z = 0.3
+            cmd_vel_pub.publish(twist)
+
+            rate.sleep()
