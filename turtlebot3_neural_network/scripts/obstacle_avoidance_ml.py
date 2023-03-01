@@ -25,20 +25,32 @@ if __name__ == "__main__":
     while not rospy.is_shutdown():
         # display menu options
         print("Choose a model to load:")
-        print("1. Random Forest")
-        print("2. Neural Network")
-        print("3. Decision Tree")
-        print("4. K-Nearest Neighbors")
+        print("1. Decision Tree")
+        print("2. Random Forest")
+        print("3. K-Nearest Neighbors")
+        print("4. MLP (Neural Network)")
+        print("5. Logistic Regression")
+        print("6. Gradient Boosting")
+        print("7. AdaBoost")
+        print("8. Extra Trees")
         choice = input()
 
         if choice == "1":
-            model_path = "model_random_forest.joblib"
+            model_path = "models/dt_model.joblib"
         elif choice == "2":
-            model_path = "model_neural_network.joblib"
+            model_path = "models/rf_model.joblib"
         elif choice == "3":
-            model_path = "model_decision_tree.joblib"
+            model_path = "models/knn_model.joblib"
         elif choice == "4":
-            model_path = "model_knn.joblib"
+            model_path = "models/nn_model.joblib"
+        elif choice == "5":
+            model_path = "models/lr_model.joblib"
+        elif choice == "6":
+            model_path = "models/gb_model.joblib"
+        elif choice == "7":
+            model_path = "models/ada_model.joblib"
+        elif choice == "8":
+            model_path = "models/et_model.joblib"           
         else:
             print("Invalid choice, please try again.")
             continue
