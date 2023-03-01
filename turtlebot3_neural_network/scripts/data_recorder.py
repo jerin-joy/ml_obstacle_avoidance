@@ -31,7 +31,7 @@ if __name__ == "__main__":
         rate.sleep()
         counter += 1 
 
-        if counter > 1e7:
+        if counter > 2000000:
             break
 
     csvwriter.writerows(dataset)
