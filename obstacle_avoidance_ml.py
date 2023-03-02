@@ -63,6 +63,7 @@ if __name__ == "__main__":
 
         while not rospy.is_shutdown():
             predictions = model.predict(laser_range)
+            predictions = np.array([(1, 0) if x == 0 else (0, 1) for x in predictions]).reshape(-1, 2)
             action = np.argmax(predictions)
 
             twist = Twist()
