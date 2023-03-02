@@ -1,0 +1,176 @@
+		Model 1: DecisionTreeClassifier
+Accuracy: 0.8172
+Precision: 0.8836
+Recall: 0.8294
+F1 score: 0.8556
+ROC AUC score: 0.8468
+
+Confusion Matrix:
+[[ 915  237]
+ [ 370 1799]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.71      0.79      0.75      1152
+           1       0.88      0.83      0.86      2169
+
+    accuracy                           0.82      3321
+   macro avg       0.80      0.81      0.80      3321
+weighted avg       0.82      0.82      0.82      3321
+
+_____________________________________________________________________
+		Model 2: RandomForestClassifier
+Accuracy: 0.8609
+Precision: 0.9219
+Recall: 0.8598
+F1 score: 0.8898
+ROC AUC score: 0.9366
+
+Confusion Matrix:
+[[ 994  158]
+ [ 304 1865]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.77      0.86      0.81      1152
+           1       0.92      0.86      0.89      2169
+
+    accuracy                           0.86      3321
+   macro avg       0.84      0.86      0.85      3321
+weighted avg       0.87      0.86      0.86      3321
+
+_____________________________________________________________________
+		Model 3: KNeighborsClassifier
+Accuracy: 0.8506
+Precision: 0.8726
+Recall: 0.9032
+F1 score: 0.8876
+ROC AUC score: 0.8836
+
+Confusion Matrix:
+[[ 866  286]
+ [ 210 1959]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.80      0.75      0.78      1152
+           1       0.87      0.90      0.89      2169
+
+    accuracy                           0.85      3321
+   macro avg       0.84      0.83      0.83      3321
+weighted avg       0.85      0.85      0.85      3321
+
+_____________________________________________________________________
+		Model 4: MLPClassifier
+Accuracy: 0.8359
+Precision: 0.8823
+Recall: 0.8640
+F1 score: 0.8730
+ROC AUC score: 0.9065
+
+Confusion Matrix:
+[[ 902  250]
+ [ 295 1874]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.75      0.78      0.77      1152
+           1       0.88      0.86      0.87      2169
+
+    accuracy                           0.84      3321
+   macro avg       0.82      0.82      0.82      3321
+weighted avg       0.84      0.84      0.84      3321
+
+_____________________________________________________________________
+		Model 5: LogisticRegression
+Accuracy: 0.6634
+Precision: 0.6979
+Recall: 0.8543
+F1 score: 0.7682
+ROC AUC score: 0.7083
+
+Confusion Matrix:
+[[ 350  802]
+ [ 316 1853]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.53      0.30      0.39      1152
+           1       0.70      0.85      0.77      2169
+
+    accuracy                           0.66      3321
+   macro avg       0.61      0.58      0.58      3321
+weighted avg       0.64      0.66      0.64      3321
+
+_____________________________________________________________________
+		Model 6: GradientBoostingClassifier
+Accuracy: 0.8750
+Precision: 0.9137
+Recall: 0.8930
+F1 score: 0.9032
+ROC AUC score: 0.9390
+
+Confusion Matrix:
+[[ 969  183]
+ [ 232 1937]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.81      0.84      0.82      1152
+           1       0.91      0.89      0.90      2169
+
+    accuracy                           0.88      3321
+   macro avg       0.86      0.87      0.86      3321
+weighted avg       0.88      0.88      0.88      3321
+
+_____________________________________________________________________
+		Model 7: AdaBoostClassifier
+Accuracy: 0.8314
+Precision: 0.9078
+Recall: 0.8257
+F1 score: 0.8648
+ROC AUC score: 0.9106
+
+Confusion Matrix:
+[[ 970  182]
+ [ 378 1791]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.72      0.84      0.78      1152
+           1       0.91      0.83      0.86      2169
+
+    accuracy                           0.83      3321
+   macro avg       0.81      0.83      0.82      3321
+weighted avg       0.84      0.83      0.83      3321
+
+_____________________________________________________________________
+		Model 8: ExtraTreesClassifier
+Accuracy: 0.8726
+Precision: 0.9217
+Recall: 0.8797
+F1 score: 0.9002
+ROC AUC score: 0.9418
+
+Confusion Matrix:
+[[ 990  162]
+ [ 261 1908]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.86      0.82      1152
+           1       0.92      0.88      0.90      2169
+
+    accuracy                           0.87      3321
+   macro avg       0.86      0.87      0.86      3321
+weighted avg       0.88      0.87      0.87      3321
+
+_____________________________________________________________________
