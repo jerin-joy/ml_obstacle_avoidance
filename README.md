@@ -45,7 +45,7 @@ source devel/setup.bash
 ```
 roslaunch turtlebot3_neural_network turtlebot3_square.launch
 ```
-5. To perform the obstacle avoidance of the robot using Laser Range Finder, navigate to scripts folder and enter:
+5. To perform the obstacle avoidance of the robot using Laser Range Finder, enter:
 ```
 python obstacle_avoidance_laser.py
 ```
@@ -53,5 +53,10 @@ python obstacle_avoidance_laser.py
 ```
 python data_recorder.py
 ```
-7. Open 'ml_training_evaluation.ipynb' jupyter notebook file and run block by block.
+7. Open 'ml_training_evaluation.ipynb' jupyter notebook file and run all blocks for the data training and model evaluation.
+8. Test the Machine Learning model on TurtleBot robot, launch the gazebo world again and enter:
+```
+python obstacle_avoidance_ml.py
+```
+9. Select the classifier you need to use from the list provided in the terminal. 
    
